@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
 import './App.css';
+import publicRoutes from './routes/publicRoutes';
+import { getAllNewsSourceAction } from './actions';
+import { Layout } from './components';
 
-function App() {
+function App(props) {
+
+  useEffect(() => {
+    props.getAllNewsSourceAction();
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Layout>
+        <Switch>
+          {publicRoutes.map((route, i) => <Route key={i} {...route} />)}
+        </Switch>
+      </Layout>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => (
+  {
+    ...state
+  });
+
+export default connect(mapStateToProps, { getAllNewsSourceAction })(App);
