@@ -21,7 +21,7 @@ const NewsPage = (props) => {
     }
     return (
         <div>
-            <Link to='/'><ArrowLeftOutlined style={{ fontSize: '28px' }} /></Link>
+            <Link to='/' className="back-btn"><ArrowLeftOutlined style={{ fontSize: '28px' }} /></Link>
             <div className='list-container'>
                 {newsListHandler()}
             </div>

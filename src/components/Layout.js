@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 export default function Layout(props) {
     return (
         <Fragment>
-            <Link to='/'><h1 className="main-heading">Fox News</h1></Link>
+            <span className="main-heading"><Link to='/'>Fox News</Link></span>
             {props.children}
         </Fragment>
     )

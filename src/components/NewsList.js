@@ -28,7 +28,7 @@ export default function NewsList(props) {
 
 
     return (
-        <div className="site-card-wrapper">
+        <div className="site-card-wrapper category-list-wrapper">
             <Row gutter={16}>
                 {newsListhandler()}
             </Row>
