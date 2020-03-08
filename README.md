@@ -4,9 +4,9 @@ Fox News App is a simple news app 🗞️ which uses NewsAPI to fetch top news h
 
 The codebase focuses 👓 on following key things:
 
-Code structuring, style and comments
-react + redux
-Emojis (ofcourse) 😛
+1.Code structuring, style and comments
+2.react + redux
+3.Emojis (ofcourse) 😛
 
 ## To run the project follow the below commands
  1. npm install
